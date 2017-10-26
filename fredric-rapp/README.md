@@ -21,11 +21,10 @@ Follow these instructions carefully and in order.
 ---
 
 ##### Investigate how `let` and `const` are now used in the code. Where did you need to convert `const` into `let` to make the code work? Can you identify any patterns/similarities?
-
-(Put your answer here)
-
+const allows for unchangeable constants to be declared globally whereas let is only used within the scope of it's code block.
+any for loop that had a const I changed to let. Plus any line where a variable was being declared Which is also where I saw a pattern.
 ---
 
 ##### How did it go with making the adaptation from concatenations to template literal notation? Do you think you'll mostly use template literal notation from now on?
 
-(Put your answer here)
+This was a cool and very fun and challenging run. Making the change was VERY easy and Yeah, I'm pretty sure I'll be making the switch!

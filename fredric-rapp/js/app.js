@@ -64,8 +64,8 @@ function handleClick(event) {
       if(event.target.id === allProducts[i].name) {
         allProducts[i].votes += 1;
         allProducts[i].votes += 1;
-        console.log(event.target.id + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views');
-        console.log(event.target.id + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views');
+        console.log(`${event.target.id} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`);
+        console.log(`${event.target.id} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`);
       }
     }
   }
@@ -77,7 +77,7 @@ function handleClick(event) {
 function showList() {
   for(let i = 0; i < allProducts.length; i++) {
     const liEl = document.createElement('li');
-    liEl.textContent = allProducts[i].name + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views';
+    liEl.textContent = `${allProducts[i].name} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`;
     list.appendChild(liEl);
   }
 }
@@ -132,7 +132,7 @@ if(localStorage.busmall){
   allProducts = JSON.parse(localStorage.busmall)
 } else {
   console.log('There is no local storage data; initialize app by creating instances');
-  for(const i = 0; i < names.length; i++) {
+  for(let i = 0; i < names.length; i++) {
     new Product(names[i]);
   }
   console.log(allProducts);
